@@ -1,0 +1,47 @@
+{
+    "name": "hedii/laravel-date-range",
+    "description": "A date range trait for Laravel Eloquent models",
+    "type": "library",
+    "license": "MIT",
+    "keywords": [
+        "hedii",
+        "laravel-date-range",
+        "laravel",
+        "trait",
+        "php"
+    ],
+    "authors": [
+        {
+            "name": "hedii",
+            "email": "hedi.chaibs@gmail.com",
+            "homepage": "https://hedichaibi.com"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/hedii/laravel-date-range/issues",
+        "source": "https://github.com/hedii/laravel-date-range",
+        "email": "hedi.chaibs@gmail.com"
+    },
+    "require": {
+        "php": ">=7.0",
+        "illuminate/database": "^5.3",
+        "nesbot/carbon": "^1.21",
+        "illuminate/support": "^5.3"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^3.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "Hedii\\LaravelDateRange\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Hedii\\LaravelDateRange\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit"
+    }
+}
