@@ -1,6 +1,6 @@
 [![Build Status](https://travis-ci.org/hedii/laravel-date-range.svg?branch=master)](https://travis-ci.org/hedii/laravel-date-range)
 
-# Uptime Checker
+# Laravel Date Range
 
 A date range trait with local scope methods for Laravel Eloquent models
 
