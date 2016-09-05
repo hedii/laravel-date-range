@@ -47,14 +47,14 @@ class MyModel extends Model
 
 | Method name    | Parameters       | Description                                           |
 | -------------- | ---------------- | ----------------------------------------------------- |
-| `currentDay`   | none             | Scope a query to only include current day entries     |
-| `lastDay`      | none             | Scope a query to only include last day entries        |
-| `currentWeek`  | none             | Scope a query to only include current week entries    |
-| `lastWeek`     | none             | Scope a query to only include last week entries       |
-| `currentMonth` | none             | Scope a query to only include current month entries   |
-| `lastMonth`    | none             | Scope a query to only include last month entries      |
-| `currentYear`  | none             | Scope a query to only include current year entries    |
-| `lastYear`     | none             | Scope a query to only include last year entries       |
+| `currentDay`   | -                | Scope a query to only include current day entries     |
+| `lastDay`      | -                | Scope a query to only include last day entries        |
+| `currentWeek`  | -                | Scope a query to only include current week entries    |
+| `lastWeek`     | -                | Scope a query to only include last week entries       |
+| `currentMonth` | -                | Scope a query to only include current month entries   |
+| `lastMonth`    | -                | Scope a query to only include last month entries      |
+| `currentYear`  | -                | Scope a query to only include current year entries    |
+| `lastYear`     | -                | Scope a query to only include last year entries       |
 | `lastDays`     | (int) $countDays | Scope a query to only include the last x days entries |
 
 ### Example
