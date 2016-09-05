@@ -1,6 +1,6 @@
 {
     "name": "hedii/laravel-date-range",
-    "description": "A date range trait for Laravel Eloquent models",
+    "description": "A date range trait with local scope methods for Laravel Eloquent models",
     "type": "library",
     "license": "MIT",
     "keywords": [
