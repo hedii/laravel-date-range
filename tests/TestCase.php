@@ -35,27 +35,37 @@ class TestCase extends Orchestra
 
     protected function setUpDatabase(Application $app)
     {
-        file_put_contents($this->getTempDirectory() . '/database.sqlite', null);
+        file_put_contents($this->getTempDirectory() . '/' . $this->getTempSqliteFile(), null);
 
         $app['db']->connection()->getSchemaBuilder()->create('test_models', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name')->nullable();
             $table->string('other_field')->nullable();
             $table->string('url')->nullable();
+            $table->timestamp('logged_in_at')->nullable();
             $table->timestamps();
         });
     }
 
     protected function initializeDirectory(string $directory)
     {
-        if (File::isDirectory($directory)) {
-            File::deleteDirectory($directory);
+        if (! File::exists($directory. '/' .$this->getTempSqliteFile())) {
+            if (File::isDirectory($directory)) {
+                File::deleteDirectory($directory);
+            }
+            File::makeDirectory($directory);    
         }
-        File::makeDirectory($directory);
+        
     }
 
     public function getTempDirectory()
     {
         return __DIR__ . '/temp';
     }
+
+    public function getTempSqliteFile()
+    {
+        return 'database.sqlite';
+    }
+
 }
