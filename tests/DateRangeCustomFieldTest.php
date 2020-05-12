@@ -152,7 +152,7 @@ class DateRangeCustomFieldTest extends TestCase
         $model2 = TestModel::create(['logged_in_at' => Carbon::now()->subSeconds(36)]);
         $model3 = TestModel::create(['logged_in_at' => Carbon::now()->subSeconds(78)]);
 
-        $result = TestModel::lastSeconds(40,'logged_in_at')->get();
+        $result = TestModel::lastSeconds(40, 'logged_in_at')->get();
 
         $this->assertEquals(1, $result->count());
         $this->assertEquals($model2->id, $result->first()->id);
@@ -164,7 +164,7 @@ class DateRangeCustomFieldTest extends TestCase
         $model2 = TestModel::create(['logged_in_at' => Carbon::now()->subMinutes(2)]);
         $model3 = TestModel::create(['logged_in_at' => Carbon::now()->subDay()]);
 
-        $result = TestModel::lastMinutes(4,'logged_in_at')->get();
+        $result = TestModel::lastMinutes(4, 'logged_in_at')->get();
 
         $this->assertEquals(1, $result->count());
         $this->assertEquals($model2->id, $result->first()->id);
@@ -176,7 +176,7 @@ class DateRangeCustomFieldTest extends TestCase
         $model2 = TestModel::create(['logged_in_at' => Carbon::now()->subMinutes(30)]);
         $model3 = TestModel::create(['logged_in_at' => Carbon::now()->subDay()]);
 
-        $result = TestModel::lastHours(4,'logged_in_at')->get();
+        $result = TestModel::lastHours(4, 'logged_in_at')->get();
 
         $this->assertEquals(1, $result->count());
         $this->assertEquals($model2->id, $result->first()->id);
@@ -188,7 +188,7 @@ class DateRangeCustomFieldTest extends TestCase
         $model2 = TestModel::create(['logged_in_at' => Carbon::now()->subDays(4)]);
         $model3 = TestModel::create(['logged_in_at' => Carbon::now()->subDays(8)]);
 
-        $result = TestModel::lastDays(4,'logged_in_at')->get();
+        $result = TestModel::lastDays(4, 'logged_in_at')->get();
 
         $this->assertEquals(1, $result->count());
         $this->assertEquals($model2->id, $result->first()->id);
@@ -200,7 +200,7 @@ class DateRangeCustomFieldTest extends TestCase
         $model2 = TestModel::create(['logged_in_at' => Carbon::now()->subDays(1)]);
         $model3 = TestModel::create(['logged_in_at' => Carbon::now()->startOfWeek()->subDays(15)]);
 
-        $result = TestModel::lastWeeks(2,'logged_in_at')->get();
+        $result = TestModel::lastWeeks(2, 'logged_in_at')->get();
 
         $this->assertEquals(1, $result->count());
         $this->assertEquals($model2->id, $result->first()->id);
@@ -212,7 +212,7 @@ class DateRangeCustomFieldTest extends TestCase
         $model2 = TestModel::create(['logged_in_at' => Carbon::now()->subMonths(1)]);
         $model3 = TestModel::create(['logged_in_at' => Carbon::now()->startOfMonth()->subDays(70)]);
 
-        $result = TestModel::lastMonths(2,'logged_in_at')->get();
+        $result = TestModel::lastMonths(2, 'logged_in_at')->get();
 
         $this->assertEquals(1, $result->count());
         $this->assertEquals($model2->id, $result->first()->id);
@@ -224,7 +224,7 @@ class DateRangeCustomFieldTest extends TestCase
         $model2 = TestModel::create(['logged_in_at' => Carbon::now()->subMonths(100)]);
         $model3 = TestModel::create(['logged_in_at' => Carbon::now()->startOfYear()->subDays(70)]);
 
-        $result = TestModel::lastYears(2,'logged_in_at')->get();
+        $result = TestModel::lastYears(2, 'logged_in_at')->get();
 
         $this->assertEquals(1, $result->count());
         $this->assertEquals($model3->id, $result->first()->id);
