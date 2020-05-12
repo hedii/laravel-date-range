@@ -6,14 +6,15 @@ A date range trait with local scope methods for Laravel Eloquent models
 
 ## Table of contents
 
-- [Table of contents](#table-of-contents)
-- [Installation](#installation)
-- [Usage](#usage)
-  - [Updating your Eloquent Models](#updating-your-eloquent-models)
-  - [Available methods](#available-methods)
-  - [Example](#example)
-- [Testing](#testing)
-- [License](#license)
+- [Laravel Date Range](#laravel-date-range)
+  - [Table of contents](#table-of-contents)
+  - [Installation](#installation)
+  - [Usage](#usage)
+    - [Updating your Eloquent Models](#updating-your-eloquent-models)
+    - [Available methods](#available-methods)
+    - [Example](#example)
+  - [Testing](#testing)
+  - [License](#license)
 
 ## Installation
 

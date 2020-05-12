@@ -16,7 +16,7 @@ trait DateRange
     public function scopeCurrentMinute($query, string $fieldName = 'created_at')
     {
         return $query->whereBetween($fieldName, [
-            Carbon::now()->second(0),
+            Carbon::now()->startOfMinute(),
             Carbon::now()
         ]);
     }
@@ -31,8 +31,8 @@ trait DateRange
     public function scopelastMinute($query, string $fieldName = 'created_at')
     {
         return $query->whereBetween($fieldName, [
-            Carbon::now()->subMinute()->second(0),
-            Carbon::now()->second(0)
+            Carbon::now()->subMinute()->startOfMinute(),
+            Carbon::now()->startOfMinute()
         ]);
     }
 
@@ -46,7 +46,7 @@ trait DateRange
     public function scopeCurrentHour($query, string $fieldName = 'created_at')
     {
         return $query->whereBetween($fieldName, [
-            Carbon::now()->minute(0)->second(0),
+            Carbon::now()->startOfHour()->startOfMinute(),
             Carbon::now()
         ]);
     }
@@ -61,8 +61,8 @@ trait DateRange
     public function scopeLastHour($query, string $fieldName = 'created_at')
     {
         return $query->whereBetween($fieldName, [
-            Carbon::now()->subHour()->minute(0)->second(0),
-            Carbon::now()->minute(0)->second(0)
+            Carbon::now()->subHour()->startOfHour()->startOfMinute(),
+            Carbon::now()->startOfHour()->startOfMinute()
         ]);
     }
 
@@ -213,7 +213,7 @@ trait DateRange
     public function scopeLastMinutes($query, int $countMinutes, string $fieldName = 'created_at')
     {
         return $query->whereBetween($fieldName, [
-            Carbon::now()->subMinutes($countMinutes)->second(0),
+            Carbon::now()->subMinutes($countMinutes)->startOfMinute(),
             Carbon::now()
         ]);
     }
@@ -229,7 +229,7 @@ trait DateRange
     public function scopeLastHours($query, int $countHours, string $fieldName = 'created_at')
     {
         return $query->whereBetween($fieldName, [
-            Carbon::now()->subHours($countHours)->minute(0),
+            Carbon::now()->subHours($countHours)->startOfHour(),
             Carbon::now()
         ]);
     }
