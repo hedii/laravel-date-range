@@ -3,34 +3,21 @@
     "description": "A date range trait with local scope methods for Laravel Eloquent models",
     "type": "library",
     "license": "MIT",
-    "keywords": [
-        "hedii",
-        "laravel-date-range",
-        "laravel",
-        "trait",
-        "php"
-    ],
+    "keywords": ["hedii", "laravel-date-range", "laravel", "trait", "php"],
     "authors": [
         {
             "name": "hedii",
-            "email": "hedi.chaibs@gmail.com",
-            "homepage": "https://hedichaibi.com"
+            "email": "hedi.chaibs@gmail.com"
         }
     ],
-    "support": {
-        "issues": "https://github.com/hedii/laravel-date-range/issues",
-        "source": "https://github.com/hedii/laravel-date-range",
-        "email": "hedi.chaibs@gmail.com"
-    },
     "require": {
-        "php": ">=7.0",
-        "illuminate/database": "^5.3|^6.0",
-        "nesbot/carbon": ">=1.21 <3.0",
-        "illuminate/support": "^5.3|^6.0"
+        "php": "^7.2.5",
+        "illuminate/database": "^7.0",
+        "illuminate/support": "^7.0",
+        "nesbot/carbon": "^2.17"
     },
     "require-dev": {
-        "phpunit/phpunit": "^5.5|^8.0",
-        "orchestra/testbench": "^3.3|^4.0"
+        "orchestra/testbench": "^5.0"
     },
     "autoload": {
         "psr-4": {
@@ -41,6 +28,9 @@
         "psr-4": {
             "Hedii\\LaravelDateRange\\Tests\\": "tests/"
         }
+    },
+    "config": {
+        "sort-packages": true
     },
     "scripts": {
         "test": "vendor/bin/phpunit"
