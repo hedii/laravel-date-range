@@ -2,9 +2,9 @@
 
 namespace Hedii\LaravelDateRange\Tests;
 
-use File;
-use Illuminate\Foundation\Application;
 use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Foundation\Application;
+use Illuminate\Support\Facades\File;
 use Orchestra\Testbench\TestCase as Orchestra;
 
 class TestCase extends Orchestra
@@ -14,14 +14,14 @@ class TestCase extends Orchestra
      */
     protected $testModel;
 
-    public function setUp()
+    public function setUp(): void
     {
         parent::setUp();
 
         $this->setUpDatabase($this->app);
     }
 
-    protected function getEnvironmentSetUp($app)
+    protected function getEnvironmentSetUp($app): void
     {
         $this->initializeDirectory($this->getTempDirectory());
 
@@ -33,7 +33,7 @@ class TestCase extends Orchestra
         ]);
     }
 
-    protected function setUpDatabase(Application $app)
+    protected function setUpDatabase(Application $app): void
     {
         file_put_contents($this->getTempDirectory() . '/' . $this->getTempSqliteFile(), null);
 
@@ -47,25 +47,24 @@ class TestCase extends Orchestra
         });
     }
 
-    protected function initializeDirectory(string $directory)
+    protected function initializeDirectory(string $directory): void
     {
-        if (! File::exists($directory. '/' .$this->getTempSqliteFile())) {
+        if (! File::exists($directory . '/' . $this->getTempSqliteFile())) {
             if (File::isDirectory($directory)) {
                 File::deleteDirectory($directory);
             }
-            File::makeDirectory($directory);    
+            File::makeDirectory($directory);
         }
-        
+
     }
 
-    public function getTempDirectory()
+    public function getTempDirectory(): string
     {
         return __DIR__ . '/temp';
     }
 
-    public function getTempSqliteFile()
+    public function getTempSqliteFile(): string
     {
         return 'database.sqlite';
     }
-
 }
