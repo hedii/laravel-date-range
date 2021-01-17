@@ -1,4 +1,7 @@
-[![Build Status](https://travis-ci.org/hedii/laravel-date-range.svg?branch=master)](https://travis-ci.org/hedii/laravel-date-range)
+[![Build Status](https://github.com/hedii/laravel-date-range/workflows/Tests/badge.svg)](https://github.com/hedii/laravel-date-range/actions)
+[![Total Downloads](https://poser.pugx.org/hedii/laravel-date-range/downloads)](//packagist.org/packages/hedii/laravel-date-range)
+[![License](https://poser.pugx.org/hedii/laravel-date-range/license)](//packagist.org/packages/hedii/laravel-date-range)
+[![Latest Stable Version](https://poser.pugx.org/hedii/laravel-date-range/v)](//packagist.org/packages/hedii/laravel-date-range)
 
 # Laravel Date Range
 
