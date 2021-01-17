@@ -45,27 +45,29 @@ class MyModel extends Model
 
 ### Available methods
 
-| Method name    | Parameters           | Description                                              |
-| -------------- | -------------------- | -------------------------------------------------------- |
-| `currentMinute` | -                   | Scope a query to only include the current minute entries |
-| `lastMinute`    | -                   | Scope a query to only include the last minute entries    |
-| `currentHour`   | -                   | Scope a query to only include the current hour entries   |
-| `lastHour`      | -                   | Scope a query to only include the last hour entries      |
-| `currentDay`    | -                   | Scope a query to only include the current day entries    |
-| `lastDay`       | -                   | Scope a query to only include the last day entries       |
-| `currentWeek`   | -                   | Scope a query to only include the current week entries   |
-| `lastWeek`      | -                   | Scope a query to only include the last week entries      |
-| `currentMonth`  | -                   | Scope a query to only include the current month entries  |
-| `lastMonth`     | -                   | Scope a query to only include the last month entries     |
-| `currentYear`   | -                   | Scope a query to only include the current year entries   |
-| `lastYear`      | -                   | Scope a query to only include the last year entries      |
-| `lastSeconds`   | (int) $countSeconds | Scope a query to only include the last x seconds entries |
-| `lastMinutes`   | (int) $countMinutes | Scope a query to only include the last x minutes entries |
-| `lastHours`     | (int) $countHours   | Scope a query to only include the last x hours entries   |
-| `lastDays`      | (int) $countDays    | Scope a query to only include the last x days entries    |
-| `lastWeeks`     | (int) $countWeeks   | Scope a query to only include the last x weeks entries   |
-| `lastMonths`    | (int) $countMonths  | Scope a query to only include the last x months entries  |
-| `lastYears`     | (int) $countYears   | Scope a query to only include the last x years entries   |
+By default $fieldName is set to "created_at".
+
+| Method name    | Parameters                                | Description                                              |
+| -------------- | ----------------------------------------- | -------------------------------------------------------- |
+| `currentMinute` | (string) $fieldName                      | Scope a query to only include the current minute entries |
+| `lastMinute`    | (string) $fieldName                      | Scope a query to only include the last minute entries    |
+| `currentHour`   | (string) $fieldName                      | Scope a query to only include the current hour entries   |
+| `lastHour`      | (string) $fieldName                      | Scope a query to only include the last hour entries      |
+| `currentDay`    | (string) $fieldName                      | Scope a query to only include the current day entries    |
+| `lastDay`       | (string) $fieldName                      | Scope a query to only include the last day entries       |
+| `currentWeek`   | (string) $fieldName                      | Scope a query to only include the current week entries   |
+| `lastWeek`      | (string) $fieldName                      | Scope a query to only include the last week entries      |
+| `currentMonth`  | (string) $fieldName                      | Scope a query to only include the current month entries  |
+| `lastMonth`     | (string) $fieldName                      | Scope a query to only include the last month entries     |
+| `currentYear`   | (string) $fieldName                      | Scope a query to only include the current year entries   |
+| `lastYear`      | (string) $fieldName                      | Scope a query to only include the last year entries      |
+| `lastSeconds`   | (int) $countSeconds, (string) $fieldName | Scope a query to only include the last x seconds entries |
+| `lastMinutes`   | (int) $countMinutes, (string) $fieldName | Scope a query to only include the last x minutes entries |
+| `lastHours`     | (int) $countHours, (string) $fieldName   | Scope a query to only include the last x hours entries   |
+| `lastDays`      | (int) $countDays, (string) $fieldName    | Scope a query to only include the last x days entries    |
+| `lastWeeks`     | (int) $countWeeks, (string) $fieldName   | Scope a query to only include the last x weeks entries   |
+| `lastMonths`    | (int) $countMonths, (string) $fieldName  | Scope a query to only include the last x months entries  |
+| `lastYears`     | (int) $countYears, (string) $fieldName   | Scope a query to only include the last x years entries   |
 
 ### Example
 
