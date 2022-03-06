@@ -9,10 +9,7 @@ use Orchestra\Testbench\TestCase as Orchestra;
 
 class TestCase extends Orchestra
 {
-    /**
-     * @var \Hedii\LaravelDateRange\Tests\TestModel
-     */
-    protected $testModel;
+    protected TestModel $testModel;
 
     public function setUp(): void
     {
@@ -29,7 +26,7 @@ class TestCase extends Orchestra
         $app['config']->set('database.connections.sqlite', [
             'driver' => 'sqlite',
             'database' => $this->getTempDirectory() . '/database.sqlite',
-            'prefix' => ''
+            'prefix' => '',
         ]);
     }
 
@@ -55,7 +52,6 @@ class TestCase extends Orchestra
             }
             File::makeDirectory($directory);
         }
-
     }
 
     public function getTempDirectory(): string
